@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            body{
+                background: #000;
+                color: #fff;
+                font-family: arial;
+            }
+            .selected{
+                border: 3px solid #fff;
+            }
+            #colors{
+                width: 100%;
+            }
+            #colors div{
+                width: 50px;
+                height: 50px;
+		        float: left;
+                margin: 5px;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 50px;
+            }
+            #color-selections{
+                width: 50%;
+                clear: both;
+            }
+            #color-selections div{
+                width: 10px;
+                height: 10px;
+		        float: left;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            #expand-colors{
+		        width:100%;
+                clear: both;
+            }
+            #expand-colors div{
+                width: 30px;
+                height: 30px;
+		        float: left;
+                margin: 5px;
+                border-radius: 5px;
+            }
+        </style>
+        <script src="js/colorSelector.js"></script>
+        <script>
+            window.addEventListener('load',function(){
+                var m = new colorAutoSelector(document.getElementById('color-selector'),document.querySelector('input[name=selected-colors]'),25,5,true);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="auto-select">Auto Select</div>
+        <div id="color-selector"></div>
+        <input type="hidden" name="selected-colors"/>
+    </body>
+</html>
